@@ -6,7 +6,7 @@
 /*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 20:45:13 by asoler            #+#    #+#             */
-/*   Updated: 2022/03/29 16:37:50 by asoler           ###   ########.fr       */
+/*   Updated: 2022/03/30 15:36:46 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@ int	*ft_range(int min, int max)
 	int	size;
 	int	i;
 
+	if (min >= max)
+	{
+		range = (int *)0;
+		return (range);
+	}
 	i = 0;
 	size = (min * (- 1)) + max;
 	range = (int *)malloc(sizeof(int) * size);
